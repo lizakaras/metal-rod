@@ -8,9 +8,8 @@ def metal_rod(prices, n):
         raise ValueError ("n must b>=0")
                           
     best_value = [0] * (n + 1)     
-    best_pieces = []                    
-    for i in range(n + 1):
-        best_pieces.append([])
+    best_pieces = [[] for _ in range(n + 1)]                   
+   
 
     for r in range(1, n + 1):
         for c in range(1, r + 1):
